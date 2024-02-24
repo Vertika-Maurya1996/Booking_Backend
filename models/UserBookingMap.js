@@ -7,6 +7,7 @@ const userBookingSchema = new Schema({
   destination:String,
   pickupDate: String,
   pickupTime: String,
+  price:Number,
   userID: String,
   },
   {

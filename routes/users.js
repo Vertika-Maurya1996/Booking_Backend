@@ -7,5 +7,7 @@ router.post('/register',UserController.userRegister);
 router.post('/getUserDetails',UserController.getUserDetails)
 router.post('/confirmBooking',BookingController.confirmBookingUser)
 router.get('/getBooking/:userID',BookingController.getBooking)
+router.post('/price-booking',BookingController.bookingPrice)
+
 
 module.exports = router;

@@ -9,7 +9,6 @@ var usersRouter = require('./routes/users');
 let mongoose = require("mongoose");
 let cors = require("cors");
 let bodyParser = require("body-parser");
-const multer = require('multer');
 require('dotenv').config();
 var app = express();
 
@@ -18,7 +17,7 @@ mongoose
   .connect(process.env.DB_URI)
   .then(() => {
     console.log(
-      `Connected to MongoDB! Database name: test_data`
+      `Connected to MongoDB! Database`
     );
   })
   .catch((err) => {

@@ -42,8 +42,6 @@ try{
   ]});
   if(user){
     const match = await bcrypt.compare(password, user.password);
-    console.log("match",match)
-
       if(!match){
 
         res.status(200).json({message:'Invalid credentials'});
@@ -67,8 +65,7 @@ const getUserDetails = async(req,res)=>{
 let {userID} = req.body
 try{
     const userDetails = await User.find({_id:userID},{password:0})
-    const fileDetails = await Files.find({userID:userID}).sort({createdAt:-1})
-    let userData = {userInfo:userDetails,files:fileDetails}
+    let userData = userDetails
     if(!userDetails){
       res.status(200).json({status:false,messgae:"User not found"})
       return;
