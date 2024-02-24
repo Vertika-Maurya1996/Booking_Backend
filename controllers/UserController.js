@@ -76,7 +76,6 @@ catch(err){
     console.log("error",err)
     res.status(500).json({status:false,message:"Internal server error"});
 }
-
 }
 
 module.exports = {userRegister,userLogin,getUserDetails};
